@@ -1,4 +1,5 @@
 // import React from 'react'
+import Index from "./index.tsx";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
       </SignedOut>
       <SignedIn>
         <UserButton />
+        <Index />
       </SignedIn>
     </header>
   );
