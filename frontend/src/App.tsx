@@ -1,24 +1,27 @@
-// import React from 'react'
-import Index from "./Index.tsx";
-import Navbar from "./Navbar.tsx";
-import Hero from "./Hero.tsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
-
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Index from "./Index";
+import UploadForm from "./UploadForm";
 
 export default function App() {
   return (
-    <header>
-      
-      <SignedOut>
-        {/* <SignInButton /> */}
-        <Navbar />
-        <Hero/>
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-        <Index />
-      </SignedIn>
-    </header>
+    <Router>
+      <header>
+        <SignedOut>
+          <Navbar />
+          <Hero />
+        </SignedOut>
+
+        <SignedIn>
+          <UserButton />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/upload" element={<UploadForm />} />
+          </Routes>
+        </SignedIn>
+      </header>
+    </Router>
   );
 }
-
