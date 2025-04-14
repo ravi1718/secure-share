@@ -6,8 +6,9 @@ const UploadForm: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [title, setTitle] = useState<string>("");
   const [allFiles, setAllFiles] = useState<File | null>(null);
+  const [category , setCategory] = useState<string>("");
 
-  
+  console.log(title,category);
   const navigate = useNavigate();
 
   useEffect(()=>{
@@ -26,6 +27,8 @@ const UploadForm: React.FC = () => {
     
     const formData = new FormData();
     formData.append("title", title);
+    formData.append("category", category);
+
     if (file) {
       formData.append("file", file);
     }
@@ -74,6 +77,7 @@ const UploadForm: React.FC = () => {
           <select
             required
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            onChange={(e) => setCategory(e.target.value)}
           >
             <option value="">Select category</option>
             <option value="id">Identity Proof</option>
