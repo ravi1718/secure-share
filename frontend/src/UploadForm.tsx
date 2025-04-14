@@ -8,7 +8,7 @@ const UploadForm: React.FC = () => {
   const [allFiles, setAllFiles] = useState<File | null>(null);
   const [category , setCategory] = useState<string>("");
 
-  console.log(title,category);
+  console.log(title,category,allFiles);
   const navigate = useNavigate();
 
   useEffect(()=>{

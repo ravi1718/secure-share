@@ -1,6 +1,6 @@
-import { useState } from "react";
+
 import { UserButton } from "@clerk/clerk-react";
-import { Button } from "./components/ui/button";
+
 import { ModeToggle } from "./components/mode-toggle";
 
 const NavbarIndex = () => {

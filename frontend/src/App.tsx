@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
-import Navbar from "./Navbar";
+import { SignedIn, SignedOut, } from "@clerk/clerk-react";
+
 import Hero from "./Hero";
 import Index from "./Index";
 import UploadForm from "./UploadForm";
