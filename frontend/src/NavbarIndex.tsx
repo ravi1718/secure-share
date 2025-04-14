@@ -11,7 +11,7 @@ const NavbarIndex = () => {
       <div className="flex justify-between items-center">
         {/* Left side (can be logo or title) */}
         <div className="text-lg font-semibold text-gray-800 dark:text-white">
-          <h1>Document Manager</h1>
+          <h1>Digi-Wallet</h1>
         </div>
 
         {/* Right side (User profile and Dark mode toggle) */}
